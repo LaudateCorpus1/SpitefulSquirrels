@@ -3,6 +3,7 @@ Spiteful Squirrels
 An Angry Birds approximation
 Using Kobold2D and Box2d
 
+Useful Code in GameLayer and StartMenuLayer
 
 TO DO:
 Fix arm physics
