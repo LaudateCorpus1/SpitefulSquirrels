@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>blocks</key>
+	<array>
+		<dict>
+			<key>spriteName</key>
+			<string>brick_2.png</string>
+			<key>x</key>
+			<string>675</string>
+			<key>y</key>
+			<string>90</string>
+		</dict>
+		<dict>
+			<key>spriteName</key>
+			<string>brick_1.png</string>
+			<key>x</key>
+			<string>741</string>
+			<key>y</key>
+			<string>62</string>
+		</dict>
+		<dict>
+			<key>spriteName</key>
+			<string>brick_3.png</string>
+			<key>x</key>
+			<string>707</string>
+			<key>y</key>
+			<string>84</string>
+		</dict>
+		<dict>
+			<key>New item</key>
+			<string></string>
+			<key>spriteName</key>
+			<string>brick_2.png</string>
+			<key>x</key>
+			<string>741</string>
+			<key>y</key>
+			<string>90</string>
+		</dict>
+	</array>
+</dict>
+</plist>
