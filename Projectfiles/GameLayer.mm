@@ -32,7 +32,7 @@ BOOL level2Unlocked;
 
 @implementation GameLayer
 
-
+#pragma mark Initialize
 -(id) init
 {
 	if ((self = [super init]))
@@ -206,7 +206,10 @@ BOOL level2Unlocked;
     
 	return self;
 }
+#pragma mark-
 
+
+#pragma mark TargetCreation
 - (void)createTargets
 {
     targets = [[NSMutableSet alloc] init];
@@ -284,6 +287,7 @@ BOOL level2Unlocked;
     body->CreateFixture(&boxDef);
     [targets addObject:[NSValue valueWithPointer:body]];
 }
+#pragma mark-
 
 +(id) scene: (NSNumber *) lvl
 {
@@ -301,7 +305,13 @@ BOOL level2Unlocked;
 	return scene;
 }
 
+-(void)goToStart
+{
+    [[CCDirector sharedDirector] replaceScene:[StartMenuLayer scene]];
+}
+#pragma mark-
 
+#pragma mark BulletHandling
 //Create the bullets, add them to the list of bullets so they can be referred to later
 - (void)createBullets: (int) count
 {
@@ -383,9 +393,11 @@ BOOL level2Unlocked;
     }
     else
     {
-        [[CCDirector sharedDirector] replaceScene:[StartMenuLayer scene]];
+        [self goToStart];
     }
 }
+
+#pragma mark-
 
 //Check through all the bullets and blocks and see if they intersect
 -(void) detectCollisions
@@ -424,7 +436,12 @@ BOOL level2Unlocked;
     }
 }
 
-
+- (void)resetGame
+{
+    [self createBullets:4];
+    [self attachBullet];
+    [self createTargets];
+}
 
 -(void) dealloc
 {
@@ -536,12 +553,7 @@ BOOL level2Unlocked;
     
 }
 
-- (void)resetGame
-{
-    [self createBullets:4];
-    [self attachBullet];
-    [self createTargets];
-}
+
 
 // convenience method to convert a b2Vec2 to a CGPoint
 -(CGPoint) toPixels:(b2Vec2)vec

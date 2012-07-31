@@ -11,6 +11,7 @@
 
 @implementation StartMenuLayer
 
+#pragma mark Initialization
 -(id) init
 {
     if ((self = [super init]))
@@ -38,6 +39,7 @@
     }
     return self;
 }
+#pragma mark-
 
 -(void) startGame: (CCMenuItem *)caller
 {
