@@ -38,6 +38,6 @@ enum
 
 }
 +(id) scene: (NSNumber *) level;
-- (void)createBullets: (int) count;;
+- (void)createBullets: (int) count;
 
 @end
